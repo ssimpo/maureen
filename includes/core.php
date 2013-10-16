@@ -4,5 +4,8 @@ if(!defined('MAUREEN_INCLUDES_PATH')) {
 }
 
 class maureen {
+	public static function loadWpInclude($filename) {
+		require_once( ABSPATH . WPINC . DIRECTORY_SEPARATOR . $filename );
+	}
 }
 ?>
