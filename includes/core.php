@@ -16,5 +16,9 @@ class maureen {
 	  
 	  return $path;
    }
+   
+   public static function registerWidget() {
+	  return register_widget("Maureen_Widget");
+   }
 }
 ?>
