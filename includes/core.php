@@ -4,8 +4,17 @@ if(!defined('MAUREEN_INCLUDES_PATH')) {
 }
 
 class maureen {
-	public static function loadWpInclude($filename) {
-		require_once( ABSPATH . WPINC . DIRECTORY_SEPARATOR . $filename );
-	}
+   public static function loadWpAdminInclude($filename) {
+	  require_once( self::_getWpAdminDir()  . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . $filename . '.php');
+   }
+   
+   private static function _getWpAdminDir() {
+	  $path = str_replace(
+		 DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR, DIRECTORY_SEPARATOR, 
+		 ABSPATH . parse_url(get_admin_url())['path']
+	  );
+	  
+	  return $path;
+   }
 }
 ?>
