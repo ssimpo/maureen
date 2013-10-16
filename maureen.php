@@ -26,4 +26,7 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+define('MAUREEN_INCLUDES_PATH', plugin_dir_path(__FILE__) . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR);
+
+require_once( MAUREEN_INCLUDES_PATH . 'core.php' );
 ?>
