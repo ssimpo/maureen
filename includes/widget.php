@@ -26,5 +26,9 @@ class Maureen_Widget extends WP_Widget {
 	public function update( $new_instance, $old_instance ) {
 		// processes widget options to be saved
 	}
+    
+    public static function register() {
+        register_widget(__CLASS__);
+    }
 }
 ?>
