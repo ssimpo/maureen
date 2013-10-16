@@ -33,5 +33,5 @@ require_once( MAUREEN_INCLUDES_PATH . 'install.php' );
 require_once( MAUREEN_INCLUDES_PATH . 'widget.php' );
 
 register_activation_hook( __FILE__, 'maureen_install::setup');
-add_action('widgets_init', 'maureen::registerWidget');
+add_action('widgets_init', 'Maureen_Widget::register');
 ?>
