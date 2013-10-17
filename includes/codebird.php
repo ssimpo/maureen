@@ -1021,7 +1021,7 @@ class Codebird
             if (count($header_array) > 1) {
                 $value = $header_array[1];
             }
-            $headers[$key] = $value;
+            //$headers[$key] = $value;
         }
         if (count($reply) > 1) {
             $reply = $reply[1];
